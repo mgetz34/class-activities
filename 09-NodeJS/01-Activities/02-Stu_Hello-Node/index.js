@@ -1,0 +1,2 @@
+prompt("node is awesome!")
+

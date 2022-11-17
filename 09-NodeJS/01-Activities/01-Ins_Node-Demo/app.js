@@ -1,0 +1,5 @@
+console.log("hello class, node is awesome!")
+console.log("hello class, node is awmazing!")
+console.log("hello class, node is cool!")
+console.log("hello class, node is fantastic!")
+console.log("hello class, node is wonderful!")

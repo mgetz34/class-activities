@@ -1,0 +1,31 @@
+WORD GUESS GAME - I will present a word to the user and they will try to guess, If they guess a correct character in the word, I will display the character, if I guessan incorrect
+character in the word, I dont't display
+
+need an array of words 
+
+need to figure out a way to display a random word 
+
+need to verify if the character the user selected is in the word 
+
+how do I know what character the user selected? Keydown event listener 
+
+what dom elements do I need to store in variables as references?
+
+VARIABLES - WHAT data do I need to track over time?
+
+var wins
+var losses
+var wordsArr = [" ", " ", " "]
+
+
+
+Functions 
+
+
+
+
+
+Event Listeners
+1. start button
+2. reset button
+3. Keydown 
