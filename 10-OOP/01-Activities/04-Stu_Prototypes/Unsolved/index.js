@@ -5,12 +5,9 @@ function Character(name, type, age, strength, hitpoints) {
   this.age = age;
   this.strength = strength;
   this.hitpoints = hitpoints;
-
-  //prototype: {printStats: f, isAlive: f, attack: f, levelUp: f}
 }
 
 // TODO: Add a comment describing the purpose of `.prototype` in this method declaration
-//.prototype gives the blank generated character objects acess to methods that we add: i.e. printStats, isAlive
 Character.prototype.printStats = function () {
   console.log(
     `Name: ${this.name}\nProfession: ${this.type}\nAge: ${this.age}\nStrength: ${this.strength}\nHitPoints: ${this.hitpoints}`
@@ -19,7 +16,6 @@ Character.prototype.printStats = function () {
 };
 
 // TODO: Add a comment describing the functionality of this method
-//.protoypeisALive adds functionality to the inner object keys to give them something to compare to 
 Character.prototype.isAlive = function () {
   if (this.hitpoints > 0) {
     console.log(`${this.name} is still alive!`);
