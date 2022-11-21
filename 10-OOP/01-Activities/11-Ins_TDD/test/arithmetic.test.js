@@ -1,5 +1,6 @@
 const Arithmetic = require("../arithmetic");
 
+//describe used for organizing tests
 describe("Arithmetic", () => {
   describe("Initialization", () => {
     it("should return an object containing a 'number' property when called with the 'new' keyword", () => {
