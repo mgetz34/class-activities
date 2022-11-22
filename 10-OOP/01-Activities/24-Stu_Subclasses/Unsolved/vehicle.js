@@ -4,6 +4,9 @@ class Vehicle {
     this.numberOfWheels = numberOfWheels;
     this.sound = sound;
   }
+  useHorn() {
+    console.log(this.sound);
+  }
 
   printInfo() {
     console.log(`This vehicle has ${this.numberOfWheels} wheels`);

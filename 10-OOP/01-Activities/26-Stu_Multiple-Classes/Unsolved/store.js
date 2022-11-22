@@ -1,16 +1,19 @@
 class Store {
   constructor(name, stock) {
     this.name = name;
-    this.stock = stock;
+    this.stock = stock; // array of objects
     this.revenue = 0;
   }
 
   processProductSale(name) {
     this.stock.forEach((item) => {
+      // item  is obj {name, count, price}
       if (item.name === name) {
         if (item.count > 0) {
           // TODO: Decrement the store's stock of item
+          item.count--;
           // TODO: Increase the store's revenue
+          this.revenue += item.price;
           console.log(`Purchased ${item.name} for ${item.price}`);
         } else {
           console.log(`Sorry, ${item.name} is out of stock!`);
@@ -22,7 +25,7 @@ class Store {
   replenishStock(name, count) {
     this.stock.forEach((item) => {
       if (item.name === name) {
-        // TODO: Increase the store's stock of item
+        item.count += count;
         console.log(`Replenished ${item.name} by ${item.count}`);
       }
     });
