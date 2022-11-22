@@ -10,7 +10,4 @@ class Shape {
   }
 }
 
-const shape1 = new Shape(20, 15)
-shape1.printInfo();
-
 module.exports = Shape;
