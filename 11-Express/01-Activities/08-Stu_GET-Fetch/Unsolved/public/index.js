@@ -2,8 +2,9 @@ const petEl = document.getElementById('pets');
 const termButton = document.getElementById('term-btn');
 
 const getPets = () =>
-  fetch('/api/terms', {
-    method: 'POST',
+  fetch('/api/pets', {
+    //changed method from post to get and removed body
+    method: 'GET',
     body: '',
   })
     .then((res) => res.json())
