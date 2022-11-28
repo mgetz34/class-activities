@@ -4,6 +4,8 @@ const uuid = () => {
     .substring(1);
 };
 
+
+//data subset, array of objects
 const reviews = [
   {
     product: 'Happy Hacking Keyboard Professional 2',

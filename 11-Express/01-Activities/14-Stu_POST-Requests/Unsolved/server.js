@@ -9,6 +9,8 @@ app.get('/api/reviews', (req, res) => {
   // Your code here
   res.json(`${req.method} request received`);
 
+  console.log(`${req.method} has been recieved!!!!!!`);
+
 });
 
 // TODO: Create a POST request for `/api/reviews` that logs when a user's request has been received
@@ -17,6 +19,8 @@ app.get('/api/reviews', (req, res) => {
 app.post('/api/reviews', (req, res) => {
 
   res.json(`${req.method} request received`);
+  console.log(`${req.method} has been recieved!!!!!!`);
+
 
 });
 
@@ -24,15 +28,18 @@ app.post('/api/reviews', (req, res) => {
 app.get('/api/upvotes', (req, res) => {
   // Your code here
   res.json(`${req.method} request received`);
+  console.log(`${req.method} has been recieved!!!!!!`);
+
 
 });
 
 // TODO: Create a POST request for `api/upvotes` that logs when a user's request has been received
 // Your code here
-
 app.post('/api/upvotes', (req, res) => {
 
   res.json(`${req.method} request received`);
+  console.log(`${req.method} has been recieved!!!!!!`);
+
 
 });
 
