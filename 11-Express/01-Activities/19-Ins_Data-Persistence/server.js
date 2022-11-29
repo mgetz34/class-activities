@@ -1,8 +1,10 @@
-const express = require('express');
-const path = require('path');
-const fs = require('fs');
+const express = require('express'); //REMOTE
+//ANYTHING LISTED IN THE PACKAGE.JSON IS A REMOTE MODULE
+const path = require('path'); //SHIPPED
+//HTTP,HTTPS,FS
+const fs = require('fs'); //SHIPPED W/ NODE 
 // Helper method for generating unique ids
-const uuid = require('./helpers/uuid');
+const uuid = require('./helpers/uuid'); //CUSTOM 
 
 const PORT = 3001;
 
@@ -13,7 +15,12 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
+//http://localhost:3001/
+//sends user to index.html as home page using dirname as a relative path 
 app.get('/', (req, res) =>
+  //sendFile is a Terminal response method 
+
+  //__DIRNAME GLOBAL IN NODE - returns the current directory
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
@@ -49,12 +56,17 @@ app.post('/api/reviews', (req, res) => {
     const reviewString = JSON.stringify(newReview);
 
     // Write the string to a file
+    //first arg is file we are writing to 
+    //second arg is where were getting the data from
+    //third arg is always a cb function
+    //writeFile needs to be passed a string 
     fs.writeFile(`./db/${newReview.product}.json`, reviewString, (err) =>
       err
+      //ternary operator
         ? console.error(err)
         : console.log(
-            `Review for ${newReview.product} has been written to JSON file`
-          )
+          `Review for ${newReview.product} has been written to JSON file`
+        )
     );
 
     const response = {
@@ -63,6 +75,7 @@ app.post('/api/reviews', (req, res) => {
     };
 
     console.log(response);
+    //res.status is not a terminal response method 
     res.status(201).json(response);
   } else {
     res.status(500).json('Error in posting review');
