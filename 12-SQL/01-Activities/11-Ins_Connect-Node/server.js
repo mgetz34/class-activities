@@ -16,14 +16,17 @@ const db = mysql.createConnection(
     // MySQL username,
     user: 'root',
     // MySQL password
-    password: '',
+    password: 'root',
     database: 'classlist_db'
   },
   console.log(`Connected to the classlist_db database.`)
 );
 
 // Query database
+
+//callback function!!!!! Async ops!!!!
 db.query('SELECT * FROM students', function (err, results) {
+  //returns an array of objects!!!!!!
   console.log(results);
 });
 
