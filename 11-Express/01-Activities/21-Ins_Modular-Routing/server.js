@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const util = require('util'); //SHIPPED MODULE FROM NODE 
+const util = require('util');
 
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
@@ -27,11 +27,7 @@ app.get('/feedback', (req, res) =>
 );
 
 // Promise version of fs.readFile
-const readFromFile = util.promisify(fs.readFile); //readFile at it's core uses callbacks 
-
-//UTIL = OBJECT
-//PROMISIFY = METHOD
-
+const readFromFile = util.promisify(fs.readFile);
 
 /**
  *  Function to write data to the JSON file given a destination and some content

@@ -1,20 +1,8 @@
 [
-    {
-        "email": "JohnAppleseed@2u.com",
-        "feedbackType": "UI",
-        "feedback": "This site is cool",
-        "feedback_id": "8734"
-    },
-    {
-        "email": "mgetz",
-        "feedbackType": "Complaint",
-        "feedback": "yayayayayayayaya",
-        "feedback_id": "cb73"
-    },
-    {
-        "email": "sid",
-        "feedbackType": "Complaint",
-        "feedback": "go USA",
-        "feedback_id": "7c83"
-    }
+  {
+    "email": "JohnAppleseed@2u.com",
+    "feedbackType": "UI",
+    "feedback": "This site is cool",
+    "feedback_id": "8734"
+  }
 ]
