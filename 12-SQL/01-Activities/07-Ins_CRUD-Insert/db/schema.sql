@@ -13,18 +13,3 @@ CREATE TABLE produce (
   -- Makes a string column called "name" which cannot contain null --
   name VARCHAR(30) NOT NULL
 );
-
-SELECT * FROM inventory_db.produce;
--- Insert multiple produce items --
-INSERT INTO produce (id, name)
-VALUES
-    ( 1, "apple"),
-    ( 2, "orange"),
-    ( 3, "banana");
-    
-    USE inventory_db;
-    
-    SELECT * FROM produce;
-
--- Check if Database in Use ---
-SELECT DATABASE();

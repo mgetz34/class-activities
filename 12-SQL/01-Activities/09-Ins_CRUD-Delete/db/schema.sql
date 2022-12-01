@@ -21,22 +21,4 @@ VALUES
     ( 2, "orange"),
     ( 3, "banana");
     
-SELECT * FROM produce;
     
-    
-USE inventory_db;
-    
-UPDATE produce
-SET name = "strawberry"
-WHERE id = 1;
-
-SELECT * FROM produce;
-
-
-
-USE inventory_db;
-
-DELETE FROM produce
-WHERE id = 2;
-
-SELECT * FROM produce;
