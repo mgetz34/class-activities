@@ -20,6 +20,8 @@ CREATE TABLE customer_order (
   ON DELETE SET NULL
 );
 
+/* here's how we do comments in mysql */
+
 DESCRIBE customers;
 SELECT * FROM customers;
 DESCRIBE customer_order;

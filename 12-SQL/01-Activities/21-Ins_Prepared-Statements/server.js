@@ -16,14 +16,14 @@ const db = mysql.createConnection(
     // MySQL username,
     user: 'root',
     // MySQL password
-    password: '',
+    password: 'root',
     database: 'courses_db'
   },
   console.log(`Connected to the courses_db database.`)
 );
 
 // Hardcoded query: DELETE FROM course_names WHERE id = 3;
-
+//example of a prepared statememnt
 db.query(`DELETE FROM course_names WHERE id = ?`, 3, (err, result) => {
   if (err) {
     console.log(err);
