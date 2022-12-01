@@ -19,3 +19,6 @@ CREATE TABLE courses (
   REFERENCES instructors(id)
   ON DELETE SET NULL
 );
+
+DESCRIBE instructors;
+DESCRIBE courses;
