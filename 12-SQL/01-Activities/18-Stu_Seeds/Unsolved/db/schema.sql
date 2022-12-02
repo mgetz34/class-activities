@@ -4,8 +4,7 @@ CREATE DATABASE grocery_db;
 USE grocery_db;
 
 CREATE TABLE products(
-  -- changed below int variable and added auto_increment primary key
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT NOT NULL,
   product_name VARCHAR(30) NOT NULL,
   category_name VARCHAR(30) NOT NULL
 );
