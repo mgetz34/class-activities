@@ -1,5 +1,6 @@
 const express = require('express');
 const routes = require('./routes');
+//look for an index.js in the routes dir
 const sequelize = require('./config/connection');
 
 const app = express();
