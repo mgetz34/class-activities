@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class User extends Model {}
+class User extends Model { }
 
 User.init(
   {
@@ -19,6 +19,7 @@ User.init(
       // prevents duplicate email addresses in DB
       unique: true,
       // checks for email format (foo@bar.com)
+      //is email built into sequelize library
       validate: {
         isEmail: true,
       },

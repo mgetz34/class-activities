@@ -43,5 +43,25 @@ router.put('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+router.post('/seed', async (req, res) => {
+  const userData = await User.bulkCreate([
+    {
+      username: "mike",
+      email: 'mgetz340@gmail.com',
+      password: 'supersecret'
+    },
+    {
+      username: "jamie",
+      email: 'jamie4@gmail.com',
+      password: 'supersecure',
+    },
+    {
+      username: "meme",
+      email: 'mememe@gmail.com',
+      password: 'notsecret',
+    },
+  ]);
+  res.status(200).json(userData);
+});
 
 module.exports = router;

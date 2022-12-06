@@ -31,9 +31,9 @@ Book.init(
   },
   {
     sequelize,
-    timestamps: false, //updated_at, created_at
-    freezeTableName: true, //dont pluralize model name 
-    underscored: true, //converts camelcase to underscores, not necessary in this example 
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
     modelName: 'book',
   }
 );

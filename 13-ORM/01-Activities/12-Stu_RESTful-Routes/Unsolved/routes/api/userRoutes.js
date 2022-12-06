@@ -32,33 +32,4 @@ router.delete('/:id', async (req, res) => {
   res.json(userData);
 });
 
-
-//route to seed users table in db
-
-router.post('/seed'), async (req, res) => {
-  const userData = await User.bulkCreate([
-    {
-      username: "mike",
-      email: "mgetz340@fmail.com",
-      password: 1234
-    },
-    {
-      username: "steve",
-      email: "steve@fmail.com",
-      password: 11111
-    },
-    {
-      username: "jeff",
-      email: "jeff@gmail.com",
-      password: 22222
-    }
-  ])
-    .then((userData) => {
-      res.send(userData);
-    })
-    .catch((err) => {
-      res.json(err);
-    });
-}
-
 module.exports = router;

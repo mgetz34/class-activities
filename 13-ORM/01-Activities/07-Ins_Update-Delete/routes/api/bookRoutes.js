@@ -1,10 +1,7 @@
 const router = require('express').Router();
 const Book = require('../../models/Book');
 
-//sequelize takes the model and creates a table in the db, the model is what is goping to transact against the db 
-
 // GET all books
-// http://localhost:3001/api/books
 router.get('/', (req, res) => {
   // Get all books from the book table
   Book.findAll().then((bookData) => {
@@ -13,15 +10,13 @@ router.get('/', (req, res) => {
 });
 
 // GET a book
-// http://localhost:3001/api/books/:isbn
 router.get('/:isbn', (req, res) => {
   // Get one book from the book table
   Book.findOne(
     {
       // Gets the book based on the isbn given in the request parameters
-      //validation
-      where: {
-        isbn: req.params.isbn
+      where: { 
+        isbn: req.params.isbn 
       },
     }
   ).then((bookData) => {
@@ -30,9 +25,6 @@ router.get('/:isbn', (req, res) => {
 });
 
 // Updates book based on its isbn
-//put -- update 
-//patch -- update
-// http://localhost:3001/api/books/:isbn req.params stored on request object {isbn: value}
 router.put('/:isbn', (req, res) => {
   // Calls the update method on the Book model
   Book.update(
@@ -60,7 +52,6 @@ router.put('/:isbn', (req, res) => {
 });
 
 // Delete route for a book with a matching isbn
-// http://localhost:3001/api/books/:isbn
 router.delete('/:isbn', (req, res) => {
   // Looks for the books based on isbn given in the request parameters and deletes the instance from the database
   Book.destroy({
@@ -74,7 +65,6 @@ router.delete('/:isbn', (req, res) => {
     .catch((err) => res.json(err));
 });
 
-// http://localhost:3001/api/books/seed
 router.post('/seed', (req, res) => {
   Book.bulkCreate([
     {
