@@ -41,8 +41,14 @@ router.get('/', async (req, res) => {
 });
 
 //get one dish
+//http//localhost:3001/dish/1
 router.get('/dish/:num', async (req, res) => {
   // This method renders the 'dish' template, and uses params to select the correct dish to render in the template, based on the id of the dish.
+
+  //1st arg will always be the template you want to render to the View Layer
+  //2nd arg will alwasy be the data you want to pass to the template you are rendering!!!!!
+  //                       array[i]
+  //you must ALWAYS pass an OBJECT TO YOUR HANDLEBARS TEMPLATE
   return res.render('dish', dishes[req.params.num - 1]);
 });
 

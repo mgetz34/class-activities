@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//below notation is looking for a js file
 app.use(require('./controllers/'));
 
 sequelize.sync({ force: false }).then(() => {

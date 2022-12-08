@@ -50,6 +50,12 @@ const dishes = [
     },
   ];
 
+
+
+// {
+//   dishes: [{}]
+// }
+//passing object to write to the all template
 // get all dishes
 router.get('/', async (req, res) => {
   res.render('all', {dishes});

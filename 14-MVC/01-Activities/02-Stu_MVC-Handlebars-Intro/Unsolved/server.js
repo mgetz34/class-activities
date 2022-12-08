@@ -1,6 +1,6 @@
 // Dependencies
-const express = require('express');
-const exphbs = require('express-handlebars');
+const express = require('express'); //remote
+const exphbs = require('express-handlebars'); //remote
 const path = require('path');
 const hbs = exphbs.create({});
 
@@ -10,6 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // TODO: Describe what the following two lines of code are doing.
+//handlebars is templating engine being passed to express
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
