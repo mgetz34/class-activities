@@ -2,8 +2,6 @@ const router = require('express').Router();
 const Dish = require('../../models/Dish');
 
 // route to create/add a dish using async/await
-
-//POST http://localhost/api/dish
 router.post('/', async (req, res) => {
   try { 
     const dishData = await Dish.create({
