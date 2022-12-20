@@ -24,5 +24,6 @@ If you have completed this activity, work through the following challenge with y
 
 Use [Google](https://www.google.com) or another search engine to research the above.
 
+
 ---
 © 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
