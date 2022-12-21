@@ -16,7 +16,6 @@ Work with a partner to implement the following user story:
 
 How do you find out how many elements are in an array? 
 
-
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:

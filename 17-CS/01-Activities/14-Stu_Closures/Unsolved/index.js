@@ -1,12 +1,4 @@
 // TODO: Complete the 'counter' function below.
-function counter() {
-    var count = 0;
+function counter() {}
 
-    return {
-        increment: function () {
-            count++;
-            return count;
-        }
-    }
-}
-    module.exports = counter;
+module.exports = counter;
