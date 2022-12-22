@@ -1,6 +1,6 @@
 const express = require('express');
 const db = require('./config/connection');
-
+// Require model
 const { Book } = require('./models');
 
 const PORT = process.env.PORT || 3001;
@@ -10,37 +10,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/all-books', (req, res) => {
+  // Using model in route
   Book.find({}, (err, result) => {
     if (err) {
-      res.status(500).send(err);
+      res.status(500).send({ message: 'Internal Server Error' });
     } else {
       res.status(200).json(result);
     }
   });
-});
-
-app.get('/sum-price', (req, res) => {
-  Book.aggregate(
-    [
-      { $match: { inStock: true } },
-      {
-        $group: {
-          _id: null,
-          sum_price: { $sum: '$price' },
-          avg_price: { $avg: '$price' },
-          max_price: { $max: '$price' },
-          min_price: { $min: '$price' },
-        },
-      },
-    ],
-    (err, result) => {
-      if (err) {
-        res.status(500).send(err);
-      } else {
-        res.status(200).json(result);
-      }
-    }
-  );
 });
 
 db.once('open', () => {
