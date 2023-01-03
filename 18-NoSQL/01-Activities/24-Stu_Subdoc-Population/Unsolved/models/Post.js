@@ -13,7 +13,7 @@ const postSchema = new Schema(
     },
     tags: [
       {
-        type: Schema.Types.ObjectId,
+        type: 'Tag',
         ref: 'Tag',
       },
     ],

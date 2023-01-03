@@ -17,7 +17,6 @@ const employeeSchema = new mongoose.Schema({
 const departmentSchema = new mongoose.Schema({
   name: { type: String, required: true },
   // This will add a single subdocument to include the manager's information
-  //1-1 relationship, one manager per department
   manager: managerSchema,
   // This will include an array that holds all the employees' information
   employees: [employeeSchema],
