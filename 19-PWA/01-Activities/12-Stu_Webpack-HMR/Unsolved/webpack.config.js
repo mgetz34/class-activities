@@ -9,6 +9,10 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  devServer: {
+    // The `hot` option is to use the webpack-dev-server in combination with the hot module replacement API.
+    hot: 'only',
+  },
   // TODO: Add devServer object
   plugins: [
     new HtmlWebpackPlugin({

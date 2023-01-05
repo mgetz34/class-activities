@@ -11,9 +11,6 @@
     "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start"
   },
-  "dependencies": {
-    "express": "^4.17.1"
-  },
   "devDependencies": {
     "concurrently": "^5.2.0"
   }

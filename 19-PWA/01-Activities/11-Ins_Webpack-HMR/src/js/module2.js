@@ -16,7 +16,7 @@ moduleContent2.innerHTML = `
       <div class="col s12">
         <div class="card darken-1">
           <div class="card-content dark-text">
-            <span class="card-title">This content was added by module 2</span>
+            <span class="card-title">PWAs are a neat technology</span>
           </div>
         </div>
       </div>
