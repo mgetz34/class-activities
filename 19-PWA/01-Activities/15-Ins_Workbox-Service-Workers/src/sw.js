@@ -16,6 +16,7 @@ const urlsToCache = [
 // 3. claim
 
 // Install - the service worker is first installed and then activated.
+//great place to create and cache and give it files to cache
 self.addEventListener('install', (e) =>
   e.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
@@ -23,6 +24,7 @@ self.addEventListener('install', (e) =>
 );
 
 // Activate - the service worker is activated after install.
+//great place to manage your caches 
 self.addEventListener('activate', (e) =>
   e.waitUntil(
     caches.keys().then((keyList) =>

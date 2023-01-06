@@ -18,23 +18,7 @@ module.exports = {
       title: 'Webpack Plugin',
     }),
     new MiniCssExtractPlugin(),
-
-    new WorkboxPlugin.GenerateSW(
-      {
-        exclude: [/\.(?:png)$/],
-        runtimeCaching: [
-          {
-            urlPattern: /\.(?:png)$/,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'images',
-              expiration: {
-                maxEntries: 2
-              },
-            },
-          },
-        ],
-      })
+    new WorkboxPlugin.GenerateSW()
   ],
   module: {
     rules: [

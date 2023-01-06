@@ -33,7 +33,6 @@ export const getAllDb = async () => {
   return result;
 };
 
-
 export const getOneDb = async (id) => {
   console.log('GET from the database');
   const todosDb = await openDB('todos', 1);
@@ -44,8 +43,6 @@ export const getOneDb = async (id) => {
   console.log('result.value', result);
   return result;
 };
-
-// TODO: Fix the function below:
 export const deleteDb = async (id) => {
   console.log('DELETE from the database', id);
   const todosDb = await openDB('todos', 1);
@@ -57,7 +54,6 @@ export const deleteDb = async (id) => {
   return result;
 };
 
-// TODO: Fix the function below:
 export const putDb = async (id, content) => {
   console.log('PUT to the database');
   const todosDb = await openDB('todos', 1);
